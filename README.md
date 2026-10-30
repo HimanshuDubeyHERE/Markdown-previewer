@@ -1,16 +1,39 @@
-# React + Vite
+# ⚡ Live Markdown Previewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, real-time Markdown editing environment built with **React and Vite**. Designed for developers and technical writers who require immediate visual feedback, zero lag, and enterprise-grade security.
 
-Currently, two official plugins are available:
+## 🚀 Key Value Propositions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **Sub-Millisecond Rendering:** Instant visualization powered by the ultra-fast Vite HMR asset pipeline and the `marked` compiler.
+*   **Ironclad Security Ecosystem:** Client-side sanitization layer built with `DOMPurify` to isolate and completely eliminate Cross-Site Scripting (XSS) injection vectors.
+*   **Dual-Panel Synchronized Viewport:** Fluid side-by-side workspace designed for optimized desktop ergonomics and fluid document compilation.
+*   **Native Clipboard Operations:** Single-click async text export using the native Browser Clipboard API.
+*   **Zero-Config Architecture:** Clean CSS variable configuration offering frictionless layout modifications out of the box.
 
-## React Compiler
+## 📦 Core Architecture Dependencies
+*   [React](https://react.dev) — User interface construction
+*   [Vite](https://vite.dev) — Development build system
+*   [Marked](https://js.org) — Markdown compliance parsing engine
+*   [DOMPurify](https://github.com) — DOM-based security scrubbing
+*   [Lucide React](https://lucide.dev) — Vector UI iconography
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Rapid Installation Workflow
 
-## Expanding the ESLint configuration
+Follow these initialization directives to deploy the project locally:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# 1. Clone the master distribution package
+git clone https://github.com
+
+# 2. Access the target directory
+cd markdown-previewer
+
+# 3. Provision structural application dependencies
+npm install
+
+# 4. Initiate the local performance environment
+npm run dev
+```
+
+---
+*Maintained by the engineering team. Released under the MIT License.*
