@@ -1,0 +1,201 @@
+/* Custom variables for themes and spacing */
+:root {
+  --bg-main: #1e1e1e;
+  --bg-header: #181818;
+  --bg-panel: #252526;
+  --bg-panel-hdr: #2d2d2d;
+  --border-color: #3c3c3c;
+  --text-light: #e0e0e0;
+  --text-muted: #858585;
+  --accent-cyan: #61dafb;
+  --btn-hover: #3a3a3c;
+}
+
+/* Base structural layout */
+.mp-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  backgroundColor: var(--bg-main);
+  color: var(--text-light);
+}
+
+.mp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mp-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mp-header-title h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.mp-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-panel-hdr);
+  color: var(--text-light);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.mp-copy-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.mp-workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 15px;
+  gap: 15px;
+}
+
+.mp-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-panel);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.mp-panel-header {
+  background-color: var(--bg-panel-hdr);
+  padding: 8px 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mp-textarea {
+  flex: 1;
+  padding: 16px;
+  background-color: var(--bg-main);
+  color: #d4d4d4;
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: "Fira Code", Monaco, Consolas, Courier New, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* --- Typographic Styling Rules for the White Markdown Preview Box --- */
+.mp-preview {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  color: #24292e;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+.mp-preview h1 {
+  font-size: 1.8em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.mp-preview h2 {
+  font-size: 1.4em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.mp-preview h3 {
+  font-size: 1.2em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.mp-preview hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.mp-preview a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.mp-preview a:hover {
+  text-decoration: underline;
+}
+
+.mp-preview blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+  margin: 0 0 16px 0;
+}
+
+.mp-preview ul, .mp-preview ol {
+  padding-left: 2em;
+  margin-bottom: 16px;
+}
+
+.mp-preview li + li {
+  margin-top: 0.25em;
+}
+
+/* Formal code blocks & syntax boxes styles */
+.mp-preview pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.mp-preview code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-family: "Fira Code", Consolas, Monaco, monospace;
+}
+
+.mp-preview pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: inherit;
+}
+
+.mp-preview img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
