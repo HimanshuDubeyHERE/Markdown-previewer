@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import { Copy, Check, FileText } from 'lucide-react';
-import './mp.css'; // <-- Imports the clean stylesheet
+import './mp.css';
 
 marked.setOptions({
   breaks: true,
