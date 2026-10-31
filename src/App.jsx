@@ -11,10 +11,10 @@ marked.setOptions({
 
 const FORMAL_DEFAULT_MARKDOWN = `# Executive Summary & Systems Documentation
 
-## 1. Project Overview
+## Project Overview
 This document serves as the formal operational framework for the newly deployed **Content Render System**. The core objective is to maximize client-side throughput while maintaining ironclad security paradigms.
 
-### 1.1 Core Strategic Deliverables:
+### 1. Core Strategic Deliverables:
 - **Instantaneous Synchronization:** Live parsing engine built on the Vite standard.
 - **Enterprise-Grade Sanitation:** Complete elimination of XSS attack vectors.
 - **Cross-Platform Scalability:** Fluid layout responsive across viewport environments.
@@ -70,34 +70,31 @@ export default function MarkdownPreviewer() {
 
   return (
     <div className="mp-container">
-
       <header className="mp-header">
         <div className="mp-header-title">
-          <FileText size={24} color="#61dafb" />
+          <FileText size={22} color="#58a6ff" />
           <h1>Markdown Live Previewer</h1>
         </div>
         <button onClick={handleCopy} className="mp-copy-btn">
-          {copied ? <Check size={16} color="#4ade80" /> : <Copy size={16} />}
+          {copied ? <Check size={14} color="#3fb950" /> : <Copy size={14} />}
           <span>{copied ? 'Copied!' : 'Copy Raw Markdown'}</span>
         </button>
       </header>
 
-
       <div className="mp-workspace">
-
         <div className="mp-panel">
-          <div className="mp-panel-header">Editor</div>
+          <div className="mp-panel-header">Editor Workspace</div>
           <textarea
             id="editor"
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
             className="mp-textarea"
-            placeholder="Type your markdown here..."
+            placeholder="Type your formal markdown data structure here..."
           />
         </div>
 
         <div className="mp-panel">
-          <div className="mp-panel-header">Preview</div>
+          <div className="mp-panel-header">Render Output</div>
           <div
             id="preview"
             className="mp-preview"

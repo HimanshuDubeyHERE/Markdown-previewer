@@ -1,151 +1,168 @@
-/* Custom variables for themes and spacing */
 :root {
-  --bg-main: #1e1e1e;
-  --bg-header: #181818;
-  --bg-panel: #252526;
-  --bg-panel-hdr: #2d2d2d;
-  --border-color: #3c3c3c;
-  --text-light: #e0e0e0;
-  --text-muted: #858585;
-  --accent-cyan: #61dafb;
-  --btn-hover: #3a3a3c;
+  --bg-app: #0d1117;
+  --bg-surface: #161b22;
+  --bg-editor: #090c10;
+  --border-subtle: #30363d;
+  --text-primary: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent-cyan: #58a6ff;
+  --btn-hover: #21262d;
 }
 
-/* Base structural layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-app);
+}
+
 .mp-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  backgroundColor: var(--bg-main);
-  color: var(--text-light);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
 }
 
 .mp-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: var(--bg-header);
-  border-bottom: 1px solid var(--border-color);
+  padding: 14px 24px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 }
 
 .mp-header-title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .mp-header-title h1 {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
 }
 
 .mp-copy-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--bg-panel-hdr);
-  color: var(--text-light);
-  border: none;
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid var(--border-subtle);
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.2s ease;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mp-copy-btn:hover {
-  background-color: var(--btn-hover);
+  background-color: #30363d;
+  border-color: #8b949e;
 }
 
 .mp-workspace {
   display: flex;
   flex: 1;
   overflow: hidden;
-  padding: 15px;
-  gap: 15px;
+  padding: 24px;
+  gap: 24px;
 }
 
 .mp-panel {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-panel);
-  border-radius: 6px;
+  background-color: var(--bg-surface);
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .mp-panel-header {
-  background-color: var(--bg-panel-hdr);
-  padding: 8px 16px;
-  font-size: 12px;
+  background-color: #1f242c;
+  padding: 12px 20px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-weight: 700;
   color: var(--text-muted);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .mp-textarea {
   flex: 1;
-  padding: 16px;
-  background-color: var(--bg-main);
-  color: #d4d4d4;
+  padding: 20px;
+  background-color: var(--bg-editor);
+  color: #e6edf3;
   border: none;
   resize: none;
   outline: none;
-  font-family: "Fira Code", Monaco, Consolas, Courier New, monospace;
+  font-family: "Fira Code", Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* --- Typographic Styling Rules for the White Markdown Preview Box --- */
 .mp-preview {
   flex: 1;
-  padding: 24px;
+  padding: 32px;
   overflow-y: auto;
   background-color: #ffffff;
-  color: #24292e;
+  color: #1f2328;
   line-height: 1.6;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .mp-preview h1 {
-  font-size: 1.8em;
-  border-bottom: 1px solid #eaecef;
-  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  font-weight: 700;
+  color: #0969da; 
+  border-bottom: 2px solid #d0d7de;
+  padding-bottom: 0.4em;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
 }
 
 .mp-preview h2 {
-  font-size: 1.4em;
-  border-bottom: 1px solid #eaecef;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #24292f;
+  border-bottom: 1px solid #d0d7de;
   padding-bottom: 0.3em;
-  margin-top: 24px;
+  margin-top: 32px;
   margin-bottom: 16px;
 }
 
 .mp-preview h3 {
-  font-size: 1.2em;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #24292f;
   margin-top: 24px;
   margin-bottom: 16px;
 }
 
 .mp-preview hr {
-  height: 0.25em;
+  height: 4px;
   padding: 0;
-  margin: 24px 0;
-  background-color: #e1e4e8;
+  margin: 32px 0;
+  background-color: #d0d7de;
   border: 0;
+  border-radius: 2px;
 }
 
 .mp-preview a {
-  color: #0366d6;
+  color: #0969da;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .mp-preview a:hover {
@@ -153,38 +170,43 @@
 }
 
 .mp-preview blockquote {
-  padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
-  margin: 0 0 16px 0;
+  padding: 0 16px;
+  color: #57606a;
+  border-left: 4px solid #d0d7de;
+  margin: 0 0 20px 0;
+  font-style: italic;
+  background-color: #f6f8fa;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 0 6px 6px 0;
 }
 
 .mp-preview ul, .mp-preview ol {
-  padding-left: 2em;
-  margin-bottom: 16px;
+  padding-left: 24px;
+  margin-bottom: 20px;
 }
 
-.mp-preview li + li {
-  margin-top: 0.25em;
+.mp-preview li {
+  margin-top: 6px;
 }
 
-/* Formal code blocks & syntax boxes styles */
 .mp-preview pre {
-  padding: 16px;
+  padding: 20px;
   overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
+  font-size: 88%;
+  line-height: 1.5;
   background-color: #f6f8fa;
-  border-radius: 6px;
-  margin-bottom: 16px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .mp-preview code {
-  padding: 0.2em 0.4em;
+  padding: 3px 6px;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px;
+  background-color: #afb8c133;
+  border-radius: 6px;
   font-family: "Fira Code", Consolas, Monaco, monospace;
 }
 
@@ -196,6 +218,7 @@
 
 .mp-preview img {
   max-width: 100%;
-  box-sizing: content-box;
-  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 12px;
 }
